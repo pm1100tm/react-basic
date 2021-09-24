@@ -3,11 +3,17 @@
 import React, { Component } from 'react';
 
 class Habit extends Component {
-  handleHabitIncrease = (event) => {};
+  handleHabitIncrease = () => {
+    this.props.onIncrement(this.props.habit.count);
+  };
 
-  handleHabitDecrease = (event) => {};
+  handleHabitDecrease = () => {
+    this.props.onDecrement(this.props.habit);
+  };
 
-  handleHabitDelete = (event) => {};
+  handleHabitDelete = () => {
+    this.props.onDelete(this.props.habit);
+  };
 
   render() {
     console.log(this.props);
