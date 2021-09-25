@@ -16,9 +16,9 @@ class HabbitAdd extends Component {
 
   render() {
     return (
-      <form ref={this.formRef} className="form-habbit-add" onSubmit={this.onHabitAdd}>
-        <input ref={this.inputRef} type="text" className="input-habbit-add" />
-        <button className="button-habbit-add">ADD</button>
+      <form ref={this.formRef} className="habbit-add-form" onSubmit={this.onHabitAdd}>
+        <input ref={this.inputRef} type="text" className="habbit-add-input" />
+        <button className="habbit-add-button">ADD</button>
       </form>
     );
   }
