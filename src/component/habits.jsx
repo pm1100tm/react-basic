@@ -5,14 +5,14 @@ import Habit from './habit';
 import HabbitAdd from './habit-add';
 
 class Habits extends Component {
-  onAddHabit = (event) => {
-    console.log('Habits');
+  handleOnHabitAdd = (habitName) => {
+    this.props.onHabitAdd(habitName);
   };
 
   render() {
     return (
       <>
-        <HabbitAdd />
+        <HabbitAdd onHabitAdd={this.handleOnHabitAdd} />
         <ul>
           {this.props.habits.map((habit) => (
             <Habit

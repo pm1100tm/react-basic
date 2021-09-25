@@ -3,16 +3,22 @@
 import React, { Component } from 'react';
 
 class HabbitAdd extends Component {
-  onAddHabit = (event) => {
+  formRef = React.createRef();
+  inputRef = React.createRef();
+
+  onHabitAdd = (event) => {
     event.preventDefault();
-    console.log('HabbitAdd');
+    const addHabitName = this.inputRef.current.value;
+    addHabitName && this.props.onHabitAdd(addHabitName);
+    // this.inputRef.current.value = '';
+    this.formRef.current.reset();
   };
 
   render() {
     return (
-      <form className="form-habbit-add" onSubmit={this.onAddHabit}>
-        <input type="text" className="input-habbit-add" />
-        <button className="button-habbit-add"></button>
+      <form ref={this.formRef} className="form-habbit-add" onSubmit={this.onHabitAdd}>
+        <input ref={this.inputRef} type="text" className="input-habbit-add" />
+        <button className="button-habbit-add">ADD</button>
       </form>
     );
   }
