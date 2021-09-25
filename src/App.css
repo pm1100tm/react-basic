@@ -56,6 +56,13 @@ button {
   color: white;
 }
 
+.habit-reset-button {
+  margin-left: 2.5em;
+  font-size: 1.5rem;
+  background-color: red;
+  color: white;
+}
+
 .habit-li {
   font-size: 2.5rem;
   padding: 0.5em;
