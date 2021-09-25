@@ -35,6 +35,11 @@ class App extends Component {
     this.setState({ habits });
   };
 
+  handleHabitAdd = (habitName) => {
+    const habits = [...this.state.habits, { id: Date.now(), name: habitName, count: 0 }];
+    this.setState({ habits });
+  };
+
   render() {
     return (
       <>
@@ -44,6 +49,7 @@ class App extends Component {
           onIncrement={this.handleHabitIncrease}
           onDecrement={this.handleHabitDecrease}
           onDelete={this.handleHabitDelete}
+          onHabitAdd={this.handleHabitAdd}
         />
       </>
     );

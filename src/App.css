@@ -34,6 +34,23 @@ button {
   border-radius: 50%;
 }
 
+.form-habbit-add {
+  margin-top: 0.5em;
+  margin-left: 2em;
+  font-size: 2rem;
+}
+
+.input-habbit-add {
+  vertical-align: middle;
+  font-size: 2rem;
+}
+
+.button-habbit-add {
+  display: inline-block;
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
 .habit-li {
   font-size: 2.5rem;
   padding: 0.5em;
