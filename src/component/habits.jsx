@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 import Habit from './habit';
-import HabbitAdd from './habit-add';
+import HabbitAdd from './habitAddForm';
 
 class Habits extends Component {
   handleOnHabitAdd = (habitName) => {
