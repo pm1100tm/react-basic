@@ -3,6 +3,16 @@
 import React, { PureComponent } from 'react';
 
 class Habit extends PureComponent {
+  // 컴포넌트가 UI상에 등록이 되었을 때, 사용자에 보여질 때  호출
+  componentDidMount() {
+    console.log('componentDidMount');
+  }
+
+  // 지우기 전에 호출
+  componentWillUnmount() {
+    console.log('componentWillUnmount');
+  }
+
   handleHabitIncrease = () => {
     this.props.onIncrement(this.props.habit);
   };
